@@ -1,0 +1,24 @@
+server:
+  port: 9090
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test?serverTimezone=GMT%2b8&useSSL=false
+    username: root
+    password: "@Lichenrui1227"
+  main:
+    allow-bean-definition-overriding: true
+  mybatis:
+    mapper-locations: classpath:mapper/*.xml   #扫描所有mybatis的xml文件
+#    configuration:
+#      log-impl: org.apache.ibatis.logging.stdout.StdOutImpl  #控制台打印sql配置，但此处未生效
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+files:
+  upload:
+    path: /Users/lichenrui/web 3/RainngCourseBE/files/
+
+
